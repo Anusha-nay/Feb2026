@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+   <Appenders>
+   <File name="FILEOUT" fileName="Logs/mylogs.log" append="true">
+   <PatternLayout>
+   <Pattern>"%d [%t] %p %c - %m%n"</Pattern>
+   </PatternLayout>
+   </File>
+      <Console name="STDOUT"> target="SYSTEM_OUT">
+         <PatternLayout pattern="%d [%t] %p %c - %m%n"/>
+      </Console>
+   </Appenders>
+   <Loggers>
+      <Root level="debug">
+         <AppenderRef ref="STDOUT" level="info"/>
+         <AppenderRef ref="FILEOUT" level="debug"/>
+      </Root>
+   </Loggers>
+</Configuration>
